@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon1.png">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(135deg, #f0f8ff, #ffebcd);
+      color: #333;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+      color: #e74c3c;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      position: relative;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6347;
+    }
+
+    /* Slideshow Styles */
+    .slideshow-container {
+      position: relative;
+      margin: 20px auto;
+      max-width: 800px;
+    }
+
+    .slides img, 
+    .slides video {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .prev, .next {
+      font-size: 20px;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .dot-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background-color: #717171;
+    }
+
+    h2 {
+      text-align: center;
+      color: #e74c3c;
+      font-family: 'Roboto', sans-serif;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .slides img, 
+      .slides video {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo1.jpg" alt="Logo">
+    <h1>My Portfolio</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+      <li><a href="Aboutme.html"><i class="fa fa-fw fa-user"></i> About Me</a></li>
+      <li><a href="education.html"><i class="fa fa-fw fa-graduation-cap"></i> Education</a></li>
+      <li><a href="experience.html"><i class="fa fa-fw fa-briefcase"></i> Experience</a></li>
+      <li><a href="family.html"><i class="fa fa-fw fa-users"></i>Family</a></li>
+      <li><a href="gallery.html"><i class="fa fa-fw fa-camera"></i> Gallery</a></li>
+      <li><a href="contact.html"><i class="fa fa-fw fa-phone"></i> Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="slideshow-container">
+  <h2>Family Moments</h2>
+  <div class="slides">
+    <img src="raya1.jpg" alt="Raya 2023">
+  </div>
+  <div class="slides">
+    <img src="raya2.jpg" alt="Raya 2024">
+  </div>
+  <div class="slides">
+    <img src="raya3.jpg" alt="Raya 2021">
+  </div>
+  <a class="prev" aria-label="Previous Slide" onclick="changeSlide(1, -1)">&#10094;</a>
+  <a class="next" aria-label="Next Slide" onclick="changeSlide(1, 1)">&#10095;</a>
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1, 1)"></span>
+    <span class="dot" onclick="currentSlide(1, 2)"></span>
+    <span class="dot" onclick="currentSlide(1, 3)"></span>
+  </div>
+</section>
+
+<section class="slideshow-container">
+  <h2>Family Activities</h2>
+  <div class="slides">
+    <video width="100%" autoplay loop muted controls>
+      <source src="activity1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="slides">
+    <video width="100%" autoplay loop muted controls>
+      <source src="Activity2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+  </div>
+  <div class="slides">
+    <video width="100%" autoplay loop muted controls>
+      <source src="activity3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+  </div>
+  <a class="prev" aria-label="Previous Slide" onclick="changeSlide(2, -1)">&#10094;</a>
+  <a class="next" aria-label="Next Slide" onclick="changeSlide(2, 1)">&#10095;</a>
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(2, 1)"></span>
+    <span class="dot" onclick="currentSlide(2, 2)"></span>
+    <span class="dot" onclick="currentSlide(2, 3)"></span>
+  </div>
+</section>
+
+ <div class="music-player">
+    <audio id="background-music" loop>
+      <source src="backgroundmusic1.mp3" type="audio/mp3">
+      <source src="backgroundmusic1.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+
+<script>
+  const slideIndexes = [1, 1];
+  const slideshows = document.getElementsByClassName("slideshow-container");
+
+  let autoplayInterval = setInterval(() => {
+    changeSlide(1, 1);
+  }, 3000);
+
+  function changeSlide(slideshowIndex, n) {
+    clearInterval(autoplayInterval); // Stop current autoplay
+    showSlides(slideshowIndex, slideIndexes[slideshowIndex - 1] += n);
+    autoplayInterval = setInterval(() => {
+      changeSlide(1, 1);
+    }, 3000); // Restart autoplay
+  }
+
+  function currentSlide(slideshowIndex, n) {
+    showSlides(slideshowIndex, slideIndexes[slideshowIndex - 1] = n);
+  }
+
+  function showSlides(slideshowIndex, n) {
+    const slides = slideshows[slideshowIndex - 1].getElementsByClassName("slides");
+    const dots = slideshows[slideshowIndex - 1].getElementsByClassName("dot");
+    if (n > slides.length) slideIndexes[slideshowIndex - 1] = 1;
+    if (n < 1) slideIndexes[slideshowIndex - 1] = slides.length;
+    for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+    for (let i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
+    slides[slideIndexes[slideshowIndex - 1] - 1].style.display = "block";
+    dots[slideIndexes[slideshowIndex - 1] - 1].className += " active";
+  }
+
+  for (let i = 0; i < slideshows.length; i++) {
+    showSlides(i + 1, slideIndexes[i]);
+  }
+
+   // Get the audio element
+    var audio = document.getElementById("background-music");
+
+    // Check if there's a saved position from local storage
+    if (localStorage.getItem("audioTime")) {
+      // If there is, set the audio's current time to that value
+      audio.currentTime = localStorage.getItem("audioTime");
+    } else {
+      // If no saved position, start from the beginning
+      audio.currentTime = 0;
+    }
+
+    // Play the audio if it's not already playing
+    audio.play();
+
+    // Save the current playback time whenever it changes
+    audio.ontimeupdate = function() {
+      localStorage.setItem("audioTime", audio.currentTime);
+    };
+
+    // Optional: Pause audio when the page is unloaded (this is important to stop auto-play on next page)
+    window.onbeforeunload = function() {
+      audio.pause();
+    };
+
+</script>
+
+</body>
+</html>

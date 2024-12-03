@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon1.png">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky; 
+      top: 0;          
+      z-index: 1000;    
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+      color: #e74c3c;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #e74c3c;
+    }
+
+    .header {
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+      color: tomato;
+      text-align: center;
+      padding: 32px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+    }
+
+    .column {
+      width: 23%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Animations for columns */
+    .column:nth-child(1) {
+      animation: moveUp 6s ease-in-out infinite;
+    }
+
+    .column:nth-child(2) {
+      animation: moveDown 6s ease-in-out infinite;
+    }
+
+    .column:nth-child(3) {
+      animation: moveUp 6s ease-in-out infinite;
+    }
+
+    .column:nth-child(4) {
+      animation: moveDown 6s ease-in-out infinite;
+    }
+
+    .column img {
+      width: 100%;
+      margin: 10px 0;
+      animation: bounceUpDown 3s infinite ease-in-out;
+    }
+
+    @keyframes moveUp {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-50px); /* Move images up */
+      }
+    }
+
+    @keyframes moveDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(50px); /* Move images down */
+      }
+    }
+
+    @keyframes bounceUpDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px); /* Bouncing effect for images */
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .column {
+        width: 90%;
+        margin-bottom: 20px;
+      }
+
+      .column img {
+        max-width: 80%;
+      }
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo1.jpg" alt="Logo">
+    <h1>My Portfolio</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+      <li><a href="Aboutme.html"><i class="fa fa-fw fa-user"></i> About Me</a></li>
+      <li><a href="education.html"><i class="fa fa-fw fa-graduation-cap"></i> Education</a></li>
+      <li><a href="experience.html"><i class="fa fa-fw fa-briefcase"></i> Experience</a></li>
+      <li><a href="family.html"><i class="fa fa-fw fa-users"></i>Family</a></li>
+      <li><a href="gallery.html"><i class="fa fa-fw fa-camera"></i> Gallery</a></li>
+      <li><a href="contact.html"><i class="fa fa-fw fa-phone"></i> Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<div class="header">
+  <h1>My Gallery</h1>
+</div>
+
+<div class="row">
+  <div class="column">
+    <img src="gallery1.jpg" alt="Gallery Image 1">
+    <img src="gallery5.jpg" alt="Gallery Image 2">
+    <img src="gallery9.jpg" alt="Gallery Image 3">
+    <img src="gallery13.jpg" alt="Gallery Image 4">
+    <img src="gallery3.jpg" alt="Gallery Image 5">
+    <img src="gallery7.jpg" alt="Gallery Image 6">
+    <img src="gallery11.jpg" alt="Gallery Image 7">
+  </div>
+  <div class="column">
+    <img src="gallery2.jpg" alt="Gallery Image 1">
+    <img src="gallery6.jpg" alt="Gallery Image 2">
+    <img src="gallery10.jpg" alt="Gallery Image 3">
+    <img src="gallery14.jpg" alt="Gallery Image 4">
+    <img src="gallery4.jpg" alt="Gallery Image 5">
+    <img src="gallery8.jpg" alt="Gallery Image 6">
+    <img src="gallery12.jpg" alt="Gallery Image 7">
+  </div>
+  <div class="column">
+    <img src="gallery3.jpg" alt="Gallery Image 1">
+    <img src="gallery7.jpg" alt="Gallery Image 2">
+    <img src="gallery11.jpg" alt="Gallery Image 3">
+    <img src="gallery1.jpg" alt="Gallery Image 4">
+    <img src="gallery5.jpg" alt="Gallery Image 5">
+    <img src="gallery9.jpg" alt="Gallery Image 6">
+    <img src="gallery13.jpg" alt="Gallery Image 7">
+  </div>
+  <div class="column">
+    <img src="gallery4.jpg" alt="Gallery Image 1">
+    <img src="gallery8.jpg" alt="Gallery Image 2">
+    <img src="gallery12.jpg" alt="Gallery Image 3">
+    <img src="gallery2.jpg" alt="Gallery Image 4">
+    <img src="gallery6.jpg" alt="Gallery Image 5">
+    <img src="gallery10.jpg" alt="Gallery Image 6">
+    <img src="gallery14.jpg" alt="Gallery Image 7">
+  </div>
+</div>
+ <!-- Music Player -->
+  <div class="music-player">
+    <audio id="background-music" loop>
+      <source src="backgroundmusic1.mp3" type="audio/mp3">
+      <source src="backgroundmusic1.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+ 
+<!-- JavaScript to Control Audio Playback Across Pages -->
+  <script>
+     // Get the audio element
+    var audio = document.getElementById("background-music");
+
+    // Check if there's a saved position from local storage
+    if (localStorage.getItem("audioTime")) {
+      // If there is, set the audio's current time to that value
+      audio.currentTime = localStorage.getItem("audioTime");
+    } else {
+      // If no saved position, start from the beginning
+      audio.currentTime = 0;
+    }
+
+    // Play the audio if it's not already playing
+    audio.play();
+
+    // Save the current playback time whenever it changes
+    audio.ontimeupdate = function() {
+      localStorage.setItem("audioTime", audio.currentTime);
+    };
+
+    // Optional: Pause audio when the page is unloaded (this is important to stop auto-play on next page)
+    window.onbeforeunload = function() {
+      audio.pause();
+    };
+  </script>
+
+</body>
+</html>
